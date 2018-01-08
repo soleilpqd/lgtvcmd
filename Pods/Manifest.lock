@@ -1,0 +1,16 @@
+PODS:
+  - ConnectSDK-Mac (1.6.0)
+
+DEPENDENCIES:
+  - ConnectSDK-Mac (from `Library/ConnectSDK-Mac`)
+
+EXTERNAL SOURCES:
+  ConnectSDK-Mac:
+    :path: Library/ConnectSDK-Mac
+
+SPEC CHECKSUMS:
+  ConnectSDK-Mac: 279c648f6387e6f4af002c97912be206e7f71935
+
+PODFILE CHECKSUM: 0f372b53548117ff3ea17533feb728fac464d713
+
+COCOAPODS: 1.2.1

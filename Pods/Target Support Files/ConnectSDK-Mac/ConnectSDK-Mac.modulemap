@@ -1,0 +1,6 @@
+framework module ConnectSDK_Mac {
+  umbrella header "ConnectSDK-Mac-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B1986471EDBD88200BB522F /* LTCDiscover.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1986461EDBD88200BB522F /* LTCDiscover.m */; };
+		2B19864A1EDC588E00BB522F /* LTCToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1986491EDC588E00BB522F /* LTCToast.m */; };
+		2B343C241EE1268E00F2DDF2 /* LTCPlaylist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B343C231EE1268E00F2DDF2 /* LTCPlaylist.m */; };
+		2B40E0D01EDD9CAC0005927C /* LTCLaunchBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B40E0CF1EDD9CAC0005927C /* LTCLaunchBrowser.m */; };
+		2B40E0D31EDD9CBA0005927C /* LTCLaunchYoutube.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B40E0D21EDD9CBA0005927C /* LTCLaunchYoutube.m */; };
+		2B40E0D71EDDA7150005927C /* LTCDelay.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B40E0D61EDDA7150005927C /* LTCDelay.m */; };
+		2B40E0E01EDDBB370005927C /* LTCCloseApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B40E0D91EDDBB370005927C /* LTCCloseApp.m */; };
+		2B40E0E11EDDBB370005927C /* LTCPlayMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B40E0DB1EDDBB370005927C /* LTCPlayMedia.m */; };
+		2B40E0E21EDDBB370005927C /* LTCPowerOff.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B40E0DD1EDDBB370005927C /* LTCPowerOff.m */; };
+		2B40E0E31EDDBB370005927C /* LTCVolume.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B40E0DF1EDDBB370005927C /* LTCVolume.m */; };
+		2B98CE951ED70D9F00EC4E61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B98CE941ED70D9F00EC4E61 /* main.m */; };
+		2B98CE9D1ED7173400EC4E61 /* LTCDeviceConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B98CE9C1ED7173400EC4E61 /* LTCDeviceConnector.m */; };
+		2B98CEA01ED7174000EC4E61 /* LTCTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B98CE9F1ED7174000EC4E61 /* LTCTask.m */; };
+		E154F73AC455CDAA89E265E9 /* Pods_lgtvcmd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5166CD0759D8DB4DAFD3BBE5 /* Pods_lgtvcmd.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2B98CE8F1ED70D9F00EC4E61 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		18156AC2DF0D598239C3DE87 /* Pods-lgtvcmd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lgtvcmd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lgtvcmd/Pods-lgtvcmd.debug.xcconfig"; sourceTree = "<group>"; };
+		2B1986451EDBD88200BB522F /* LTCDiscover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTCDiscover.h; sourceTree = "<group>"; };
+		2B1986461EDBD88200BB522F /* LTCDiscover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTCDiscover.m; sourceTree = "<group>"; };
+		2B1986481EDC588E00BB522F /* LTCToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTCToast.h; sourceTree = "<group>"; };
+		2B1986491EDC588E00BB522F /* LTCToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTCToast.m; sourceTree = "<group>"; };
+		2B343C221EE1268E00F2DDF2 /* LTCPlaylist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTCPlaylist.h; sourceTree = "<group>"; };
+		2B343C231EE1268E00F2DDF2 /* LTCPlaylist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTCPlaylist.m; sourceTree = "<group>"; };
+		2B40E0CE1EDD9CAC0005927C /* LTCLaunchBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTCLaunchBrowser.h; sourceTree = "<group>"; };
+		2B40E0CF1EDD9CAC0005927C /* LTCLaunchBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTCLaunchBrowser.m; sourceTree = "<group>"; };
+		2B40E0D11EDD9CBA0005927C /* LTCLaunchYoutube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTCLaunchYoutube.h; sourceTree = "<group>"; };
+		2B40E0D21EDD9CBA0005927C /* LTCLaunchYoutube.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTCLaunchYoutube.m; sourceTree = "<group>"; };
+		2B40E0D51EDDA7150005927C /* LTCDelay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTCDelay.h; sourceTree = "<group>"; };
+		2B40E0D61EDDA7150005927C /* LTCDelay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTCDelay.m; sourceTree = "<group>"; };
+		2B40E0D81EDDBB370005927C /* LTCCloseApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTCCloseApp.h; sourceTree = "<group>"; };
+		2B40E0D91EDDBB370005927C /* LTCCloseApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTCCloseApp.m; sourceTree = "<group>"; };
+		2B40E0DA1EDDBB370005927C /* LTCPlayMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTCPlayMedia.h; sourceTree = "<group>"; };
+		2B40E0DB1EDDBB370005927C /* LTCPlayMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTCPlayMedia.m; sourceTree = "<group>"; };
+		2B40E0DC1EDDBB370005927C /* LTCPowerOff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTCPowerOff.h; sourceTree = "<group>"; };
+		2B40E0DD1EDDBB370005927C /* LTCPowerOff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTCPowerOff.m; sourceTree = "<group>"; };
+		2B40E0DE1EDDBB370005927C /* LTCVolume.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTCVolume.h; sourceTree = "<group>"; };
+		2B40E0DF1EDDBB370005927C /* LTCVolume.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTCVolume.m; sourceTree = "<group>"; };
+		2B7F752E2003B9C900C3AB9B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2B98CE911ED70D9F00EC4E61 /* lgtvcmd */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lgtvcmd; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B98CE941ED70D9F00EC4E61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2B98CE9B1ED7173400EC4E61 /* LTCDeviceConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTCDeviceConnector.h; sourceTree = "<group>"; };
+		2B98CE9C1ED7173400EC4E61 /* LTCDeviceConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTCDeviceConnector.m; sourceTree = "<group>"; };
+		2B98CE9E1ED7174000EC4E61 /* LTCTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTCTask.h; sourceTree = "<group>"; };
+		2B98CE9F1ED7174000EC4E61 /* LTCTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTCTask.m; sourceTree = "<group>"; };
+		2B98CEA11ED7187000EC4E61 /* LTCConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTCConstant.h; sourceTree = "<group>"; };
+		37E212F0C34756CF40AC0FCD /* Pods-lgtvcmd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lgtvcmd.release.xcconfig"; path = "Pods/Target Support Files/Pods-lgtvcmd/Pods-lgtvcmd.release.xcconfig"; sourceTree = "<group>"; };
+		5166CD0759D8DB4DAFD3BBE5 /* Pods_lgtvcmd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lgtvcmd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B98CE8E1ED70D9F00EC4E61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E154F73AC455CDAA89E265E9 /* Pods_lgtvcmd.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B19864B1EDC589100BB522F /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				2B98CE9E1ED7174000EC4E61 /* LTCTask.h */,
+				2B98CE9F1ED7174000EC4E61 /* LTCTask.m */,
+				2B1986481EDC588E00BB522F /* LTCToast.h */,
+				2B1986491EDC588E00BB522F /* LTCToast.m */,
+				2B40E0CE1EDD9CAC0005927C /* LTCLaunchBrowser.h */,
+				2B40E0CF1EDD9CAC0005927C /* LTCLaunchBrowser.m */,
+				2B40E0D11EDD9CBA0005927C /* LTCLaunchYoutube.h */,
+				2B40E0D21EDD9CBA0005927C /* LTCLaunchYoutube.m */,
+				2B40E0D51EDDA7150005927C /* LTCDelay.h */,
+				2B40E0D61EDDA7150005927C /* LTCDelay.m */,
+				2B40E0D81EDDBB370005927C /* LTCCloseApp.h */,
+				2B40E0D91EDDBB370005927C /* LTCCloseApp.m */,
+				2B40E0DA1EDDBB370005927C /* LTCPlayMedia.h */,
+				2B40E0DB1EDDBB370005927C /* LTCPlayMedia.m */,
+				2B343C221EE1268E00F2DDF2 /* LTCPlaylist.h */,
+				2B343C231EE1268E00F2DDF2 /* LTCPlaylist.m */,
+				2B40E0DC1EDDBB370005927C /* LTCPowerOff.h */,
+				2B40E0DD1EDDBB370005927C /* LTCPowerOff.m */,
+				2B40E0DE1EDDBB370005927C /* LTCVolume.h */,
+				2B40E0DF1EDDBB370005927C /* LTCVolume.m */,
+			);
+			name = Task;
+			sourceTree = "<group>";
+		};
+		2B98CE881ED70D9F00EC4E61 = {
+			isa = PBXGroup;
+			children = (
+				2B7F752E2003B9C900C3AB9B /* README.md */,
+				2B98CE931ED70D9F00EC4E61 /* lgtvcmd */,
+				2B98CE921ED70D9F00EC4E61 /* Products */,
+				BA582D42519888F1CF5CD764 /* Pods */,
+				2FE2F266BED338D1BC90A399 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2B98CE921ED70D9F00EC4E61 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B98CE911ED70D9F00EC4E61 /* lgtvcmd */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B98CE931ED70D9F00EC4E61 /* lgtvcmd */ = {
+			isa = PBXGroup;
+			children = (
+				2B98CE941ED70D9F00EC4E61 /* main.m */,
+				2B1986451EDBD88200BB522F /* LTCDiscover.h */,
+				2B1986461EDBD88200BB522F /* LTCDiscover.m */,
+				2B98CE9B1ED7173400EC4E61 /* LTCDeviceConnector.h */,
+				2B98CE9C1ED7173400EC4E61 /* LTCDeviceConnector.m */,
+				2B98CEA11ED7187000EC4E61 /* LTCConstant.h */,
+				2B19864B1EDC589100BB522F /* Task */,
+			);
+			path = lgtvcmd;
+			sourceTree = "<group>";
+		};
+		2FE2F266BED338D1BC90A399 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5166CD0759D8DB4DAFD3BBE5 /* Pods_lgtvcmd.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA582D42519888F1CF5CD764 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				18156AC2DF0D598239C3DE87 /* Pods-lgtvcmd.debug.xcconfig */,
+				37E212F0C34756CF40AC0FCD /* Pods-lgtvcmd.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B98CE901ED70D9F00EC4E61 /* lgtvcmd */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B98CE981ED70D9F00EC4E61 /* Build configuration list for PBXNativeTarget "lgtvcmd" */;
+			buildPhases = (
+				72F83BF643E6172D3511C74C /* [CP] Check Pods Manifest.lock */,
+				2B98CE8D1ED70D9F00EC4E61 /* Sources */,
+				2B98CE8E1ED70D9F00EC4E61 /* Frameworks */,
+				2B98CE8F1ED70D9F00EC4E61 /* CopyFiles */,
+				B141F2BBDB345B72319B68E2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = lgtvcmd;
+			productName = lgtvcmd;
+			productReference = 2B98CE911ED70D9F00EC4E61 /* lgtvcmd */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B98CE891ED70D9F00EC4E61 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LTC;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "GMO-Z.com RunSystem";
+				TargetAttributes = {
+					2B98CE901ED70D9F00EC4E61 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 2B98CE8C1ED70D9F00EC4E61 /* Build configuration list for PBXProject "lgtvcmd" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2B98CE881ED70D9F00EC4E61;
+			productRefGroup = 2B98CE921ED70D9F00EC4E61 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B98CE901ED70D9F00EC4E61 /* lgtvcmd */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		72F83BF643E6172D3511C74C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B141F2BBDB345B72319B68E2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-lgtvcmd/Pods-lgtvcmd-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B98CE8D1ED70D9F00EC4E61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B19864A1EDC588E00BB522F /* LTCToast.m in Sources */,
+				2B40E0E31EDDBB370005927C /* LTCVolume.m in Sources */,
+				2B40E0D31EDD9CBA0005927C /* LTCLaunchYoutube.m in Sources */,
+				2B40E0E21EDDBB370005927C /* LTCPowerOff.m in Sources */,
+				2B98CEA01ED7174000EC4E61 /* LTCTask.m in Sources */,
+				2B343C241EE1268E00F2DDF2 /* LTCPlaylist.m in Sources */,
+				2B98CE951ED70D9F00EC4E61 /* main.m in Sources */,
+				2B40E0E11EDDBB370005927C /* LTCPlayMedia.m in Sources */,
+				2B40E0D01EDD9CAC0005927C /* LTCLaunchBrowser.m in Sources */,
+				2B40E0E01EDDBB370005927C /* LTCCloseApp.m in Sources */,
+				2B1986471EDBD88200BB522F /* LTCDiscover.m in Sources */,
+				2B98CE9D1ED7173400EC4E61 /* LTCDeviceConnector.m in Sources */,
+				2B40E0D71EDDA7150005927C /* LTCDelay.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2B98CE961ED70D9F00EC4E61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		2B98CE971ED70D9F00EC4E61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2B98CE991ED70D9F00EC4E61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18156AC2DF0D598239C3DE87 /* Pods-lgtvcmd.debug.xcconfig */;
+			buildSettings = {
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) '@executable_path/../Frameworks' '@loader_path/Frameworks' '@executable_path' '@loader_path' 'ConnectSDK-Mac'";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2B98CE9A1ED70D9F00EC4E61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37E212F0C34756CF40AC0FCD /* Pods-lgtvcmd.release.xcconfig */;
+			buildSettings = {
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) '@executable_path/../Frameworks' '@loader_path/Frameworks' '@executable_path' '@loader_path' 'ConnectSDK-Mac'";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B98CE8C1ED70D9F00EC4E61 /* Build configuration list for PBXProject "lgtvcmd" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B98CE961ED70D9F00EC4E61 /* Debug */,
+				2B98CE971ED70D9F00EC4E61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B98CE981ED70D9F00EC4E61 /* Build configuration list for PBXNativeTarget "lgtvcmd" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B98CE991ED70D9F00EC4E61 /* Debug */,
+				2B98CE9A1ED70D9F00EC4E61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B98CE891ED70D9F00EC4E61 /* Project object */;
+}
