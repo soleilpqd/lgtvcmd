@@ -65,7 +65,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "-t 60 ~/lgtv_hello2.json"
+            argument = "/Users/soleilpqd/Documents/LGTV/JSON/weekday.json"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

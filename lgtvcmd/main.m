@@ -23,7 +23,7 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        printf( "LG SmartTV Remote Command v%s\n", LTC_TASK_VERSION );
+        printf( "LG SmartTV Remote Command v%s\nUsing ConnectSDK v1.6.0 from 'www.svlconnectsdk.com'\nPort to MacOSX by DươngPQ\n\n", LTC_TASK_VERSION );
         [ LTCTask registAllTaskClasses ];
         
         if ( argc <= 1 ) {
@@ -70,24 +70,24 @@ int main(int argc, const char * argv[]) {
             file = [ NSString stringWithFormat:@"%@/%@", NSHomeDirectory(), [ file substringFromIndex:2 ]];
         
         NSData *sampleData = [ NSData dataWithContentsOfFile:file ];
-        
         if ( sampleData == nil ) {
             printf( "Fail to read JSON file: %s.\n", file.UTF8String );
             return 5;
         }
         
         NSMutableArray<LTCTask*> *tasks = [ NSMutableArray new ];
+        file = [ file stringByDeletingLastPathComponent ];
         
         NSError *error = nil;
         id json = [ NSJSONSerialization JSONObjectWithData:sampleData options:0 error:&error ];
         if ( json != nil ) {
             if ([ json isKindOfClass:[ NSDictionary class ]]) {
-                LTCTask *task = [ LTCTask taskWithDictionary:json ];
+                LTCTask *task = [ LTCTask taskWithDictionary:json workingFolder:file ];
                 if ( task != nil )[ tasks addObject:task ];
             } else if ([ json isKindOfClass:[ NSArray class ]]) {
                 for ( id obj in json ) {
                     if ([ obj isKindOfClass:[ NSDictionary class ]]) {
-                        LTCTask *task = [ LTCTask taskWithDictionary:obj ];
+                        LTCTask *task = [ LTCTask taskWithDictionary:obj workingFolder:file ];
                         if ( task != nil )[ tasks addObject:task ];
                     }
                 }
@@ -101,7 +101,7 @@ int main(int argc, const char * argv[]) {
             printf( "No task to do.\n" );
             return 2;
         }
-        
+
         GCDWebServerLogLevel = kGCDWebServerLoggingLevel_Warning;
         LTCDiscover *discover = [ LTCDiscover shared ];
         discover.tasks = tasks;

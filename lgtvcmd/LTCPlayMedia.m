@@ -55,8 +55,8 @@
     [ super registTaskClass:[ LTCPlayMedia class ] forName:@"Media" ];
 }
 
--( instancetype )initWithDictionary:( NSDictionary<NSString*,id>* )info {
-    if ( self = [ super initWithDictionary:info ]) {
+-( instancetype )initWithDictionary:( NSDictionary<NSString*,id>* )info workingFolder:( NSString* )path {
+    if ( self = [ super initWithDictionary:info workingFolder:path ]) {
         NSString *url = [ LTCTask handleUrlString:info[LTC_TASK_URL] ];
         if ( url != nil && url.length > 0 ) {
             _url = [ NSURL URLWithString:url ];
@@ -85,8 +85,8 @@
               LTC_TASK_TITLE:   @"Optional. Title of media.",
               LTC_TASK_LOOP:    @"Optional. Looping playing media or not.",
               LTC_TASK_META:    [ NSString stringWithFormat:@"Optional. Meta image file to play with media (eg. Album Art, video poster ...). "
-                                 "Value must be array of JSON dictonary with keys:\n\t\t\"%@\": Required. URL of image file.\n\t\t\"%@\": Required. Role of image file. "
-                                 "Available values:\n\t\t\t\"%@\": icon displayed on player.\n\t\t\t\"%@\": video poster.\n\t\t\t\"%@\": Album Art when play sound.",
+                                 "Value must be array of JSON dictonary with keys:\n\t\t[{\n\t\t\t\"%@\": Required. URL of image file.\n\t\t\t\"%@\": Required. Role of image file. "
+                                 "Available values:\n\t\t\t\t\"%@\": icon displayed on player.\n\t\t\t\t\"%@\": video poster.\n\t\t\t\t\"%@\": Album Art when play sound.\n\t\t}]",
                                  LTC_TASK_URL, LTC_TASK_TYPE, LTC_TASK_TYPE_THUMB, LTC_TASK_TYPE_POSTER, LTC_TASK_TYPE_ART ]};
 }
 

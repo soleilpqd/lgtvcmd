@@ -22,8 +22,8 @@
               LTC_TASK_OFFSET: @"Optional. Number of seconds to start playing." };
 }
 
--( instancetype )initWithDictionary:( NSDictionary<NSString*,id>* )info {
-    if ( self = [ super initWithDictionary:info ]) {
+-( instancetype )initWithDictionary:( NSDictionary<NSString*,id>* )info workingFolder:( NSString* )path {
+    if ( self = [ super initWithDictionary:info workingFolder:path ]) {
         _contentId = [ info[LTC_TASK_ID] copy ];
         if ( _contentId == nil ) return nil;
         _startTime = [ info[LTC_TASK_OFFSET] unsignedIntegerValue ];

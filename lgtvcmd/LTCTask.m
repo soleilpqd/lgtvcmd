@@ -93,18 +93,20 @@
     printf( "USAGE: lgtvcmd [-t discover_timeout] <path to JSON file containing tasks information>\n"
            "\tdiscover_timeout: optional. Time to discover devices. Default 5 minutes.\n\n"
            "Each task is represented by a JSON dictionary with pattern:\n" );
-    printf( "{\n\t\"name\":\"Task_Name\",\n"
+    printf( "{\n\t\"task\":\"Task_Name\",\n"
            "\t\"pre_success\":true/false,\n"
            "\t\"next\":[{<JSON next task 1>},{<JSON next task 2>}],\n"
            "\t\"duration\":<number of seconds to delay before do next tasks>,\n"
            "\t\"param1\":\"value 1\",\n"
            "\t\"param2\":\"value 2\",\n"
+           "\t\"random\":\"File path\"\n"
            "}\n\n" );
     printf( "Key:\n" );
-    printf( "\t\"name\": name of task (below).\n" );
+    printf( "\t\"task\": name of task (below).\n" );
     printf( "\t\"pre_success\": Values: true/false. If true, this task stops if the previous task failed.\n" );
     printf( "\t\"next\": list of next tasks.\n" );
     printf( "\t\"duration\": time to delay to perform next tasks.\n" );
+    printf( "\t\"random\": array of paths to JSON files which contain array of dictionaries. One dictionary of each file will be picked randomly to append to current one.\n" );
     printf( "\tOthers: paramters of this task (below).\n" );
     printf( "\nJSON file can be a single JSON dictionary for single task or an array of JSON dicitonaries for tasks.\n" );
     printf( "\nList of tasks name with their parameters:\n" );
@@ -112,12 +114,14 @@
     for ( NSString *name in classes.allKeys ) {
         Class cls = [ classes objectForKey:name ];
         NSDictionary *desc = [ cls parametersDescription ];
-        printf( "\"%s\": %s\n", name.UTF8String, [[ desc objectForKey:LTC_TASK_DESC ] UTF8String ]);
+        printf( "- %s\n", [[ desc objectForKey:LTC_TASK_DESC ] UTF8String ]);
+        printf( "{\n\t\"task\":\"%s\",\n", name.UTF8String );
         for ( NSString *param in desc.allKeys ) {
             if ( param.length == 0 ) continue;
             NSString *paramDesc = [ desc objectForKey:param ];
             printf( "\t\"%s\": %s\n", param.UTF8String, paramDesc.UTF8String );
         }
+        printf( "}\n\n" );
     }
 }
 
@@ -133,17 +137,55 @@
     }
 }
 
-+( instancetype )taskWithDictionary:( NSDictionary<NSString*, id>* )info {
++( NSInteger )getRandomFrom:( NSInteger )minValue to:( NSInteger )maxValue {
+    NSInteger i = arc4random() % ( maxValue + 1 - minValue );
+    return i + minValue;
+}
+
++( void )appendRandomDataFrom:( NSArray<NSString*>* )array into:( NSMutableDictionary<NSString*, id>* )taskData workingFolder:( NSString* )path {
+    for ( NSString* f in array ) {
+        NSString *pth = f;
+        if (![ pth hasPrefix:@"/" ]) {
+            pth = [ path stringByAppendingPathComponent:pth ];
+        }
+        NSData *data = [ NSData dataWithContentsOfFile:pth ];
+        if ( data == nil ) {
+            printf( "Fail to read JSON file for random: %s.\n", pth.UTF8String );
+            continue;
+        }
+        NSError *error = nil;
+        id json = [ NSJSONSerialization JSONObjectWithData:data options:0 error:&error ];
+        if ( json == nil ) {
+            printf( "Fail to parse JSON for random from file: %s\nError: %s\n", pth.UTF8String, error.description.UTF8String );
+            continue;
+        }
+        if (![ json isKindOfClass:[ NSArray class ]] || [( NSArray* )json count ] == 0 ) {
+            printf( "Random JSON must contain array of dictionaries: %s\n", pth.UTF8String );
+            continue;
+        }
+        NSArray *jsonArr = ( NSArray* )json;
+        NSInteger index = [ self getRandomFrom:0 to:jsonArr.count - 1 ];
+        NSDictionary *dic = [ jsonArr objectAtIndex:index ];
+        [ taskData addEntriesFromDictionary:dic ];
+    }
+}
+
++( instancetype )taskWithDictionary:( NSDictionary<NSString*, id>* )info workingFolder:( NSString* )path {
     if (![ info.allKeys containsObject:LTC_TASK_NAME ]) return nil;
     NSString *name = [ info objectForKey:LTC_TASK_NAME ];
     NSMutableDictionary *taskInfo = [ self taskClassInfo ];
     Class class = [ taskInfo objectForKey:name ];
     if ( class == nil ) return nil;
-    LTCTask *task = [[ class alloc ] initWithDictionary:info ];
+    NSMutableDictionary< NSString*, id>* result = [ NSMutableDictionary dictionaryWithDictionary:info ];
+    id random = [ result objectForKey:LTC_TASK_RANDOM ];
+    if ( random != nil && [ random isKindOfClass:[ NSArray class ]]) {
+        [ self appendRandomDataFrom:random into:result workingFolder:path ];
+    }
+    LTCTask *task = [[ class alloc ] initWithDictionary:result workingFolder:path ];
     return task;
 }
 
--( instancetype )initWithDictionary:( NSDictionary<NSString*, id>* )info {
+-( instancetype )initWithDictionary:( NSDictionary<NSString*, id>* )info workingFolder:( NSString* )path {
     if ( self = [ super init ]) {
         _name = [[ info objectForKey:LTC_TASK_NAME ] copy ];
         _isRequirePreviousTaskSuccess = [[ info objectForKey:LTC_TASK_PRE_SUCCESS ] boolValue ];
@@ -153,7 +195,7 @@
             NSMutableArray *result = [ NSMutableArray new ];
             for ( id obj in ( NSArray* )object ) {
                 if ([ obj isKindOfClass:[ NSDictionary class ]]) {
-                    LTCTask *task = [ LTCTask taskWithDictionary:obj ];
+                    LTCTask *task = [ LTCTask taskWithDictionary:obj workingFolder:path ];
                     if ( task != nil ) {
                         [ result addObject:task ];
                     }

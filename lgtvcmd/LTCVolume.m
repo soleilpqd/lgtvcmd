@@ -17,8 +17,8 @@
     [ super registTaskClass:[ LTCVolume class ] forName:@"Volume" ];
 }
 
--( instancetype )initWithDictionary:( NSDictionary<NSString*,id>* )info {
-    if ( self = [ super initWithDictionary:info ]) {
+-( instancetype )initWithDictionary:( NSDictionary<NSString*,id>* )info workingFolder:( NSString* )path {
+    if ( self = [ super initWithDictionary:info workingFolder:path ]) {
         _volume = [ info[LTC_TASK_VOLUME] unsignedIntegerValue ];
         if ( _volume <= 0 ) {
             _volume = 0;

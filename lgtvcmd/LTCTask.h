@@ -18,7 +18,7 @@
 +( void )registTaskClass:( nonnull Class )taskClass forName:( nonnull NSString* )name;
 +( void )registAllTaskClasses;
 
-+( nullable instancetype )taskWithDictionary:( nonnull NSDictionary<NSString*, id>* )info;
++( nullable instancetype )taskWithDictionary:( nonnull NSDictionary<NSString*, id>* )info workingFolder:( nullable NSString* )path;
 +( void )printHelp;
 
 @property ( nonatomic, copy, nonnull ) NSString *name;
@@ -37,7 +37,7 @@
 -( void )performWithConnectors:( nonnull NSArray<LTCDeviceConnector*>* )connectors previousTask:( nullable LTCTask* )preTask;
 
 /// For subclass
--( nullable instancetype )initWithDictionary:( nonnull NSDictionary<NSString*, id>* )info;
+-( nullable instancetype )initWithDictionary:( nonnull NSDictionary<NSString*, id>* )info workingFolder:( nullable NSString* )path;
 
 -( void )performWithConnector:( nonnull LTCDeviceConnector* )connector
                  previousTask:( nullable LTCTask* )preTask

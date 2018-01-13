@@ -25,8 +25,8 @@
     [ super registTaskClass:[ LTCToast class ] forName:@"Toast" ];
 }
 
--( instancetype )initWithDictionary:( NSDictionary<NSString*,id>* )info {
-    if ( self = [ super initWithDictionary:info ]) {
+-( instancetype )initWithDictionary:( NSDictionary<NSString*,id>* )info workingFolder:( NSString* )path{
+    if ( self = [ super initWithDictionary:info workingFolder:path ]) {
         _message = [ info[LTC_TASK_MESG] copy ];
         if ( _message == nil ) return nil;
         _icon = [ info[LTC_TASK_ICON] copy ];

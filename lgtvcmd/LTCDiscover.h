@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-#define LTCLog(format, ...) LTCLogFunc(__FUNCTION__, (format),  ##__VA_ARGS__)
+//#define LTCLog(format, ...) LTCLogFunc(__FUNCTION__, (format),  ##__VA_ARGS__)
+#define LTCLog(format, ...)
 
 extern void LTCLogFunc(const char * _Nonnull funcName, NSString * _Nonnull format, ...);
 

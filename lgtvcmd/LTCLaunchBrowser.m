@@ -21,8 +21,8 @@
               LTC_TASK_URL:  @"Required. Url to open on web browser." };
 }
 
--( instancetype )initWithDictionary:( NSDictionary<NSString*,id>* )info {
-    if ( self = [ super initWithDictionary:info ]) {
+-( instancetype )initWithDictionary:( NSDictionary<NSString*,id>* )info workingFolder:( NSString* )path {
+    if ( self = [ super initWithDictionary:info workingFolder:path ]) {
         _url = [ NSURL URLWithString:[ LTCTask handleUrlString:info[LTC_TASK_URL] ]];
         if ( _url == nil ) return nil;
     }

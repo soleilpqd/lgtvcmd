@@ -35,8 +35,8 @@
               LTC_TASK_LOOP: @"Optional. Number of time to loop playing media. -1 to loop forever (not-recommended)." };
 }
 
--( instancetype )initWithDictionary:( NSDictionary<NSString*,id>* )info {
-    if ( self = [ super initWithDictionary:info ]) {
+-( instancetype )initWithDictionary:( NSDictionary<NSString*,id>* )info workingFolder:( NSString* )path {
+    if ( self = [ super initWithDictionary:info workingFolder:path ]) {
         _mimetype = info[LTC_TASK_MIME];
         _delay = [ info[LTC_TASK_TIME] unsignedIntegerValue ];
         _loopCount = [ info[LTC_TASK_LOOP] integerValue ];

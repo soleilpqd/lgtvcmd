@@ -9,7 +9,7 @@
 #ifndef LTCConstant_h
 #define LTCConstant_h
 
-#define LTC_TASK_VERSION        "1.1"
+#define LTC_TASK_VERSION        "1.2"
 
 #define LTC_TASK_DESC           @""
 
@@ -17,6 +17,7 @@
 #define LTC_TASK_PRE_SUCCESS    @"pre_success"
 #define LTC_TASK_NEXT           @"next"
 #define LTC_TASK_DURATION       @"duration"
+#define LTC_TASK_RANDOM         @"random"
 
 #define LTC_TASK_MESG           @"message"
 #define LTC_TASK_ICON           @"icon"
