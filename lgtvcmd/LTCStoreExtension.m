@@ -24,6 +24,7 @@
 #define LTC_DEVICE_SERVICE_CONFIG @"config"
 #define LTC_DEVICE_SERVICE_CAPABILITIES @"capabilities"
 #define LTC_DEVICE_SERVICE_PAIR @"pair"
+#define LTC_DEVICE_SERVICE_PERMISSIONS @"permissions" // WebOS service
 
 #define LTC_DEVICE_DESCRIPTION @"description"
 #define LTC_DEVICE_IP @"ip"
@@ -111,6 +112,10 @@
         if ( capabilites != nil ) result.capabilities = capabilites;
         NSNumber *pair = [ dictionary objectForKey:LTC_DEVICE_SERVICE_PAIR ];
         if ( pair != nil ) result.pairingType = [ pair intValue ];
+        NSArray *permissions = [ dictionary objectForKey:LTC_DEVICE_SERVICE_PERMISSIONS ];
+        if ( permissions != nil && class == [ WebOSTVService class ]) {
+            [( WebOSTVService* )result setPermissions:permissions ];
+        }
         return result;
     }
     return nil;
@@ -118,6 +123,12 @@
 
 -( NSDictionary<NSString*, id>* )toDictionary {
     NSMutableDictionary *result = [ NSMutableDictionary new ];
+    if ([ self isKindOfClass:[ WebOSTVService class ]]) {
+        NSArray *permissions = [( WebOSTVService* )self permissions ];
+        if ( permissions != nil && permissions.count > 0 ) {
+            [ result setObject:permissions forKey:LTC_DEVICE_SERVICE_PERMISSIONS ];
+        }
+    }
     [ result setObject:@( self.pairingType ) forKey:LTC_DEVICE_SERVICE_PAIR ];
     if ( self.capabilities != nil && self.capabilities.count > 0 ) {
         [ result setObject:self.capabilities forKey:LTC_DEVICE_SERVICE_CAPABILITIES ];
