@@ -10,7 +10,6 @@
 #import "LTCDeviceConnector.h"
 #import "LTCTask.h"
 #import <pthread.h>
-#import "LTCDeviceStore.h"
 
 @import ConnectSDK_Mac;
 
@@ -29,7 +28,6 @@ void LTCLogFunc( const char *funcName, NSString *format, ... ) {
 
 @property ( nonatomic, strong ) NSMutableArray<LTCDeviceConnector*>* connectors;
 @property ( nonatomic, assign ) BOOL isTimeout;
-@property ( nonatomic, strong ) LTCDeviceStore *store;
 
 @end
 
@@ -48,8 +46,7 @@ void LTCLogFunc( const char *funcName, NSString *format, ... ) {
     }
     LTCLog( @"%ld", timeoutSeconds );
     if ( self.connectors == nil ) _connectors = [ NSMutableArray new ];
-    if ( self.store == nil ) _store = [ LTCDeviceStore new ];
-    DiscoveryManager *manager = [ DiscoveryManager sharedManagerWithDeviceStore:self.store ];
+    DiscoveryManager *manager = [ DiscoveryManager sharedManager ];
     manager.pairingLevel = DeviceServicePairingLevelOn;
     manager.delegate = self;
     [ manager startDiscovery ];

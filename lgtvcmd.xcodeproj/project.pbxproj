@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B0401B820171C660050AC18 /* LTCStoreExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0401B720171C660050AC18 /* LTCStoreExtension.m */; };
 		2B1986471EDBD88200BB522F /* LTCDiscover.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1986461EDBD88200BB522F /* LTCDiscover.m */; };
 		2B19864A1EDC588E00BB522F /* LTCToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1986491EDC588E00BB522F /* LTCToast.m */; };
 		2B343C241EE1268E00F2DDF2 /* LTCPlaylist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B343C231EE1268E00F2DDF2 /* LTCPlaylist.m */; };
@@ -21,7 +20,6 @@
 		2B98CE951ED70D9F00EC4E61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B98CE941ED70D9F00EC4E61 /* main.m */; };
 		2B98CE9D1ED7173400EC4E61 /* LTCDeviceConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B98CE9C1ED7173400EC4E61 /* LTCDeviceConnector.m */; };
 		2B98CEA01ED7174000EC4E61 /* LTCTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B98CE9F1ED7174000EC4E61 /* LTCTask.m */; };
-		2B99A27D2016350A0025EA9C /* LTCDeviceStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B99A27C2016350A0025EA9C /* LTCDeviceStore.m */; };
 		E154F73AC455CDAA89E265E9 /* Pods_lgtvcmd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5166CD0759D8DB4DAFD3BBE5 /* Pods_lgtvcmd.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,8 +37,6 @@
 
 /* Begin PBXFileReference section */
 		18156AC2DF0D598239C3DE87 /* Pods-lgtvcmd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lgtvcmd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lgtvcmd/Pods-lgtvcmd.debug.xcconfig"; sourceTree = "<group>"; };
-		2B0401B620171C660050AC18 /* LTCStoreExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTCStoreExtension.h; sourceTree = "<group>"; };
-		2B0401B720171C660050AC18 /* LTCStoreExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTCStoreExtension.m; sourceTree = "<group>"; };
 		2B1986451EDBD88200BB522F /* LTCDiscover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTCDiscover.h; sourceTree = "<group>"; };
 		2B1986461EDBD88200BB522F /* LTCDiscover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTCDiscover.m; sourceTree = "<group>"; };
 		2B1986481EDC588E00BB522F /* LTCToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTCToast.h; sourceTree = "<group>"; };
@@ -69,8 +65,6 @@
 		2B98CE9E1ED7174000EC4E61 /* LTCTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTCTask.h; sourceTree = "<group>"; };
 		2B98CE9F1ED7174000EC4E61 /* LTCTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTCTask.m; sourceTree = "<group>"; };
 		2B98CEA11ED7187000EC4E61 /* LTCConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTCConstant.h; sourceTree = "<group>"; };
-		2B99A27B2016350A0025EA9C /* LTCDeviceStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTCDeviceStore.h; sourceTree = "<group>"; };
-		2B99A27C2016350A0025EA9C /* LTCDeviceStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTCDeviceStore.m; sourceTree = "<group>"; };
 		37E212F0C34756CF40AC0FCD /* Pods-lgtvcmd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lgtvcmd.release.xcconfig"; path = "Pods/Target Support Files/Pods-lgtvcmd/Pods-lgtvcmd.release.xcconfig"; sourceTree = "<group>"; };
 		5166CD0759D8DB4DAFD3BBE5 /* Pods_lgtvcmd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lgtvcmd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -141,10 +135,6 @@
 				2B1986461EDBD88200BB522F /* LTCDiscover.m */,
 				2B98CE9B1ED7173400EC4E61 /* LTCDeviceConnector.h */,
 				2B98CE9C1ED7173400EC4E61 /* LTCDeviceConnector.m */,
-				2B99A27B2016350A0025EA9C /* LTCDeviceStore.h */,
-				2B99A27C2016350A0025EA9C /* LTCDeviceStore.m */,
-				2B0401B620171C660050AC18 /* LTCStoreExtension.h */,
-				2B0401B720171C660050AC18 /* LTCStoreExtension.m */,
 				2B98CEA11ED7187000EC4E61 /* LTCConstant.h */,
 				2B19864B1EDC589100BB522F /* Task */,
 			);
@@ -265,11 +255,9 @@
 				2B40E0E31EDDBB370005927C /* LTCVolume.m in Sources */,
 				2B40E0D31EDD9CBA0005927C /* LTCLaunchYoutube.m in Sources */,
 				2B40E0E21EDDBB370005927C /* LTCPowerOff.m in Sources */,
-				2B0401B820171C660050AC18 /* LTCStoreExtension.m in Sources */,
 				2B98CEA01ED7174000EC4E61 /* LTCTask.m in Sources */,
 				2B343C241EE1268E00F2DDF2 /* LTCPlaylist.m in Sources */,
 				2B98CE951ED70D9F00EC4E61 /* main.m in Sources */,
-				2B99A27D2016350A0025EA9C /* LTCDeviceStore.m in Sources */,
 				2B40E0E11EDDBB370005927C /* LTCPlayMedia.m in Sources */,
 				2B40E0D01EDD9CAC0005927C /* LTCLaunchBrowser.m in Sources */,
 				2B40E0E01EDDBB370005927C /* LTCCloseApp.m in Sources */,
